@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hutan Kita – Edukasi Interaktif Deforestasi & Keanekaragaman Hayati</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f6f5f0;
+      color: #2f3e2f;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 1.4rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #1b5e20;
+      border-left: 6px solid #4caf50;
+      padding-left: 10px;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .quiz {
+      background: #e8f5e9;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 40px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🌳 Hutan Kita</h1>
+    <nav>
+      <a href="#home">Beranda</a>
+      <a href="#deforestasi">Tentang</a>
+      <a href="#dampak">Dampak</a>
+      <a href="#aksi">Ayo Bertindak</a>
+      <a href="#data">Fakta & Data</a>
+      <a href="#kontak">Tentang Kami</a>
+    </nav>
+  </header>
+
+  <section id="home" class="fade-in">
+    <h2>Beranda</h2>
+    <p>Selamat datang di <strong>Hutan Kita</strong> — website edukasi interaktif yang mengajak kamu memahami pentingnya menjaga hutan dan keanekaragaman hayati. Bersama kita bisa menjaga paru-paru dunia agar tetap hijau dan lestari! 🌲💚</p>
+  </section>
+
+  <section id="deforestasi" class="fade-in">
+    <h2>Tentang Deforestasi</h2>
+    <p>Deforestasi adalah proses hilangnya hutan akibat aktivitas manusia seperti penebangan, pembakaran, dan alih fungsi lahan. Dampaknya tidak hanya pada hilangnya pepohonan, tetapi juga pada perubahan iklim dan kehidupan satwa liar. Degradasi hutan terjadi saat kualitas hutan menurun karena penebangan selektif atau kebakaran, yang membuatnya kehilangan fungsi ekologis penting.</p>
+  </section>
+
+  <section id="dampak" class="fade-in">
+    <h2>Dampak terhadap Keanekaragaman Hayati</h2>
+    <p>Indonesia dikenal sebagai negara megabiodiversitas — rumah bagi ribuan spesies unik yang tidak ditemukan di tempat lain. Namun, deforestasi menyebabkan hilangnya habitat alami bagi hewan seperti orangutan, harimau Sumatra, dan cendrawasih. Setiap hektar hutan yang hilang berarti berkurangnya tempat hidup bagi mereka.</p>
+    <div class="gallery">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Orangutan_in_Borneo.jpg" alt="Orangutan">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Sumatran_Tiger_2.jpg" alt="Harimau Sumatra">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Cenderawasih_bird_of_paradise.jpg" alt="Cendrawasih">
+    </div>
+  </section>
+
+  <section id="aksi" class="fade-in">
+    <h2>Ayo Bertindak!</h2>
+    <p>Setiap langkah kecil membawa perubahan besar. Berikut beberapa hal sederhana yang bisa kamu lakukan:</p>
+    <ul>
+      <li>Menanam pohon di sekitar rumah 🌱</li>
+      <li>Mengurangi penggunaan kertas 📄</li>
+      <li>Mendukung produk ramah lingkungan ♻️</li>
+      <li>Menyebarkan informasi positif tentang pelestarian hutan 🌍</li>
+    </ul>
+    <p>Yuk, ikut bergerak dan jadilah bagian dari perubahan!</p>
+  </section>
+
+  <section id="data" class="fade-in">
+    <h2>Fakta & Data</h2>
+    <ul>
+      <li>Pada tahun 2020, Indonesia memiliki sekitar <strong>93,8 juta hektar</strong> hutan alam (Global Forest Watch).</li>
+      <li>Pada tahun 2024, Indonesia kehilangan sekitar <strong>261.575 hektar</strong> hutan alam (Mongabay, 2025).</li>
+      <li>Terdapat <strong>772 spesies terancam punah</strong> di Indonesia, termasuk 140 burung, 63 mamalia, dan 21 reptil (CBD).</li>
+    </ul>
+    <canvas id="forestChart" width="400" height="200"></canvas>
+  </section>
+
+  <section id="quiz" class="fade-in">
+    <h2>Kuis: Apa yang Bisa Kamu Lakukan?</h2>
+    <div class="quiz">
+      <p><strong>Pertanyaan:</strong> Salah satu cara sederhana menjaga hutan adalah...</p>
+      <button onclick="checkAnswer('a')">A. Menebang pohon liar</button>
+      <button onclick="checkAnswer('b')">B. Menanam pohon di rumah</button>
+      <button onclick="checkAnswer('c')">C. Membuang sampah di sungai</button>
+      <p id="quiz-result"></p>
+    </div>
+  </section>
+
+  <section id="kontak" class="fade-in">
+    <h2>Tentang Kami</h2>
+    <p><strong>Tujuan Proyek:</strong> Meningkatkan kesadaran masyarakat akan pentingnya menjaga hutan dan keanekaragaman hayati melalui media digital interaktif.</p>
+    <h3>Tim Kami</h3>
+    <ul>
+      <li>Putu Utami Pramesti Indraswari – 2315101014 – Programmer</li>
+      <li>Made Adhika Mahardhika – 2315051093 – Desainer</li>
+      <li>I Nyoman Suwenten – 2315051033 – Pencari & Penulis Materi</li>
+      <li>Rendi Al Hairi – 2317041228 – Pencari & Penulis Materi</li>
+    </ul>
+    <p>📩 Hubungi kami: <em>@hutan_kita</em> (placeholder media sosial)</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Hutan Kita | Proyek Literasi Lingkungan</p>
+  </footer>
+
+  <script>
+    // Animasi muncul saat scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+    fadeElements.forEach(el => appearOnScroll.observe(el));
+
+    // Grafik data deforestasi
+    const ctx = document.getElementById('forestChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['2020', '2021', '2022', '2023', '2024'],
+        datasets: [{
+          label: 'Luas Hutan Hilang (hektar)',
+          data: [200000, 230000, 250000, 240000, 261575],
+          backgroundColor: '#4caf50'
+        }]
+      },
+      options: {
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+
+    // Kuis sederhana
+    function checkAnswer(answer) {
+      const result = document.getElementById('quiz-result');
+      if (answer === 'b') {
+        result.textContent = '✅ Benar! Menanam pohon adalah langkah sederhana yang berdampak besar.';
+        result.style.color = 'green';
+      } else {
+        result.textContent = '❌ Kurang tepat. Coba pikirkan kembali tindakan yang ramah lingkungan!';
+        result.style.color = 'red';
+      }
+    }
+  </script>
+</body>
+</html>

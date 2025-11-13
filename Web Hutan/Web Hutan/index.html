@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hutan Kita – Edukasi Interaktif Deforestasi & Krisis Keanekaragaman Hayati</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="header-content">
+            <h1><i class="fas fa-tree"></i> Hutan Kita</h1>
+        <nav>
+                <a href="#home" class="nav-link active">Beranda</a>
+                <a href="#overview" class="nav-link">Gambaran Umum</a>
+                <a href="#causes" class="nav-link">Penyebab</a>
+                <a href="#species" class="nav-link">Spesies Terancam</a>
+                <a href="#data" class="nav-link">Data & Visualisasi</a>
+                <a href="#solutions" class="nav-link">Solusi</a>
+                <a href="#quiz" class="nav-link">Kuis</a>
+                <a href="#mini-games" class="nav-link">Mini Games</a>
+                <a href="#about" class="nav-link">Tim Kami</a>
+        </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section fade-in">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Selamat Datang di <span class="highlight">Hutan Kita</span></h2>
+                <p class="hero-subtitle">Platform Edukasi Interaktif untuk Memahami Krisis Deforestasi & Keanekaragaman Hayati Indonesia</p>
+                <p class="hero-description">Indonesia memiliki 10% dari total hutan hujan tropis dunia. Namun, kita kehilangan ratusan ribu hektar hutan setiap tahunnya. Mari pelajari, pahami, dan ambil aksi!</p>
+                <div class="hero-buttons">
+                    <a href="#overview" class="btn btn-primary"><i class="fas fa-book"></i> Mulai Belajar</a>
+                    <a href="#quiz" class="btn btn-secondary"><i class="fas fa-trophy"></i> Uji Pengetahuan</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="stat-number" data-target="261575">0</div>
+                    <div class="stat-label">Hektar Hutan Hilang (2024)</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-number" data-target="772">0</div>
+                    <div class="stat-label">Spesies Terancam Punah</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-number" data-target="93.8">0</div>
+                    <div class="stat-label">Juta Ha Hutan Indonesia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="fade-in">
+        <div class="section-header">
+            <h2><i class="fas fa-leaf"></i> Gambaran Umum: Deforestasi & Degradasi Hutan</h2>
+            <p class="section-subtitle">Memahami Apa yang Terjadi pada Hutan Indonesia</p>
+        </div>
+
+        <div class="content-tabs">
+            <button class="tab-btn active" data-tab="deforestation">Deforestasi</button>
+            <button class="tab-btn" data-tab="degradation">Degradasi</button>
+            <button class="tab-btn" data-tab="biodiversity">Keanekaragaman Hayati</button>
+        </div>
+
+        <div class="tab-content active" id="deforestation">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-tree"></i></div>
+                    <h3>Apa Itu Deforestasi?</h3>
+                    <p>Deforestasi adalah proses hilangnya hutan secara permanen akibat aktivitas manusia seperti penebangan liar, pembakaran hutan, dan alih fungsi lahan. Dalam periode 2020-2024, Indonesia kehilangan rata-rata 238.000 hektar hutan per tahun.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Dampak Global</h3>
+                    <p>Hutan Indonesia berkontribusi besar terhadap penyerapan karbon dunia. Kehilangan hutan menyebabkan emisi CO2 meningkat, berkontribusi 40% terhadap emisi gas rumah kaca Indonesia.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-water"></i></div>
+                    <h3>Ekosistem Terancam</h3>
+                    <p>Hutan bukan hanya pepohonan. Ia adalah ekosistem kompleks yang menjaga siklus air, mencegah banjir, dan menahan tanah dari erosi. Hilangnya hutan mengancam keseimbangan alam.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="degradation">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h3>Degradasi Hutan</h3>
+                    <p>Berbeda dengan deforestasi yang total, degradasi adalah penurunan kualitas hutan karena penebangan selektif, kebakaran ringan, atau gangguan ekologis. Hutan masih ada, tetapi fungsi ekologisnya berkurang drastis.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Kebakaran Hutan</h3>
+                    <p>Tahun 2019, Indonesia mengalami kebakaran hebat yang melanda 1,6 juta hektar lahan, mengubah hutan produktif menjadi semak belukar yang mudah terbakar lagi. Siklus ini mempercepat degradasi.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-seedling"></i></div>
+                    <h3>Kehilangan Fungsi</h3>
+                    <p>Hutan yang terdegradasi kehilangan kemampuan menyerap CO2, menjaga biodiversitas, dan menyediakan air bersih. Pulihkan hutan terdegradasi memerlukan puluhan tahun.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="biodiversity">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-dna"></i></div>
+                    <h3>Megabiodiversitas Indonesia</h3>
+                    <p>Indonesia menempati posisi #2 dunia untuk keanekaragaman hayati. Diperkirakan terdapat 50.000 spesies tanaman, 1.500 spesies burung (432 endemik), dan ratusan mamalia unik.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-skull"></i></div>
+                    <h3>Krisis Kepunahan</h3>
+                    <p>Menurut IUCN Red List, Indonesia memiliki 772 spesies terancam punah: 140 burung, 63 mamalia, 21 reptil. Hilangnya habitat adalah penyebab utama (80%).</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Jaring Kehidupan</h3>
+                    <p>Setiap spesies terhubung dalam jaring makanan. Kehilangan satu spesies dapat menyebabkan keruntuhan ekosistem. Contoh: kepunahan penyerbuk menyebabkan gagal panen tanaman pangan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Causes Section -->
+    <section id="causes" class="fade-in">
+        <div class="section-header">
+            <h2><i class="fas fa-search"></i> Penyebab Deforestasi di Indonesia</h2>
+            <p class="section-subtitle">Mengapa Hutan Kita Terus Menyusut?</p>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-marker">1</div>
+                <div class="timeline-content">
+                    <h3><i class="fas fa-industry"></i> Industri Kelapa Sawit (Palm Oil)</h3>
+                    <p><strong>Kontribusi: 40%</strong> dari total deforestasi</p>
+                    <p>Indonesia adalah produsen minyak sawit terbesar dunia. Perkebunan sawit monokultur menggantikan hutan hujan. Antara 2001-2016, 11 juta hektar hutan dikonversi menjadi perkebunan sawit.</p>
+                    <ul>
+                        <li>Konsumsi global sawit meningkat 5% per tahun</li>
+                        <li>Digunakan dalam 50% produk makanan & kosmetik</li>
+                        <li>Menyediakan lapangan kerja untuk 21 juta orang</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">2</div>
+                <div class="timeline-content">
+                    <h3><i class="fas fa-cut"></i> Penebangan Liar (Illegal Logging)</h3>
+                    <p><strong>Kontribusi: 25%</strong> dari total deforestasi</p>
+                    <p>Penebangan tanpa izin masih marak. Kayu bernilai tinggi (meranti, eboni, ulin) ditebang secara liar untuk diekspor atau dijual di pasar domestik.</p>
+                    <ul>
+                        <li>Nilai kayu ilegal mencapai $5-10 miliar per tahun</li>
+                        <li>20% dari total produksi kayu Indonesia illegal</li>
+                        <li>Target utama: Hutan Kalimantan & Papua</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">3</div>
+                <div class="timeline-content">
+                    <h3><i class="fas fa-users"></i> Alih Fungsi Lahan Pertanian</h3>
+                    <p><strong>Kontribusi: 20%</strong> dari total deforestasi</p>
+                    <p>Tekanan populasi membuat masyarakat membuka lahan baru di hutan untuk pertanian subsisten dan komersial.</p>
+                    <ul>
+                        <li>Sistem ladang berpindah (shifting cultivation)</li>
+                        <li>Pertumbuhan penduduk 1,3% per tahun</li>
+                        <li>Kebutuhan pangan meningkat</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">4</div>
+                <div class="timeline-content">
+                    <h3><i class="fas fa-fire"></i> Kebakaran Hutan & Lahan</h3>
+                    <p><strong>Kontribusi: 10%</strong> dari total deforestasi</p>
+                    <p>Kebakaran terjadi secara alami dan sengaja (pembukaan lahan). El Niño membuat kondisi lebih kering dan meningkatkan risiko.</p>
+                    <ul>
+                        <li>Tahun 2015: 2,6 juta ha terbakar</li>
+                        <li>Tahun 2019: 1,6 juta ha terbakar</li>
+                        <li>Emisi CO2 dari kebakaran setara 20-30% dari emisi tahunan Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">5</div>
+                <div class="timeline-content">
+                    <h3><i class="fas fa-mountain"></i> Pertambangan & Infrastruktur</h3>
+                    <p><strong>Kontribusi: 5%</strong> dari total deforestasi</p>
+                    <p>Pembangunan jalan, tambang, dan PLTA memerlukan pembukaan hutan.</p>
+                    <ul>
+                        <li>Pembangunan jalan transmigrasi</li>
+                        <li>Pertambangan emas, nikel, batu bara</li>
+                        <li>Bendungan dan PLTA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Endangered Species Section -->
+    <section id="species" class="fade-in">
+        <div class="section-header">
+            <h2><i class="fas fa-paw"></i> Spesies Terancam Punah</h2>
+            <p class="section-subtitle">Ikatan Tak Terpisahkan: Hutan & Kehidupan Satwa Liar</p>
+        </div>
+
+        <div class="species-grid">
+            <div class="species-card" data-species="orangutan">
+                <div class="species-image">🦧</div>
+                <h3>Orangutan</h3>
+                <p class="species-status critical">Status: Sangat Terancam</p>
+                <p class="species-info">Tinggal: Kalimantan & Sumatra | Populasi: ~104.700</p>
+                <p>Kehilangan 80% habitat dalam 20 tahun terakhir akibat perkebunan sawit dan kebakaran.</p>
+                <button class="btn-small" onclick="showSpeciesModal('orangutan')">Pelajari Lebih Lanjut</button>
+            </div>
+
+            <div class="species-card" data-species="tiger">
+                <div class="species-image">🐅</div>
+                <h3>Harimau Sumatra</h3>
+                <p class="species-status critical">Status: Terancam Punah</p>
+                <p class="species-info">Tinggal: Sumatra | Populasi: ~400-500</p>
+                <p>Dulu ada 3 subspesies harimau Indonesia. Harimau Jawa & Bali sudah punah, tinggal Sumatra.</p>
+                <button class="btn-small" onclick="showSpeciesModal('tiger')">Pelajari Lebih Lanjut</button>
+            </div>
+
+            <div class="species-card" data-species="rhino">
+                <div class="species-image">🦏</div>
+                <h3>Badak Jawa</h3>
+                <p class="species-status critical">Status: Kritis</p>
+                <p class="species-info">Tinggal: Ujung Kulon | Populasi: ~75</p>
+                <p>Salah satu mamalia paling langka di dunia. Hanya ada di Taman Nasional Ujung Kulon.</p>
+                <button class="btn-small" onclick="showSpeciesModal('rhino')">Pelajari Lebih Lanjut</button>
+            </div>
+
+            <div class="species-card" data-species="elephant">
+                <div class="species-image">🐘</div>
+                <h3>Gajah Sumatra</h3>
+                <p class="species-status endangered">Status: Terancam</p>
+                <p class="species-info">Tinggal: Sumatra | Populasi: ~2.400-2.800</p>
+                <p>Habitat terfragmentasi oleh perkebunan dan infrastruktur. Konflik dengan manusia meningkat.</p>
+                <button class="btn-small" onclick="showSpeciesModal('elephant')">Pelajari Lebih Lanjut</button>
+            </div>
+
+            <div class="species-card" data-species="bird">
+                <div class="species-image">🦜</div>
+                <h3>Cendrawasih</h3>
+                <p class="species-status endangered">Status: Terancam</p>
+                <p class="species-info">Tinggal: Papua & Papua Barat | Populasi: Beragam</p>
+                <p>42 spesies cendrawasih hidup di hutan Papua. Perburuan dan perdagangan ilegal mengancam populasi.</p>
+                <button class="btn-small" onclick="showSpeciesModal('bird')">Pelajari Lebih Lanjut</button>
+            </div>
+
+            <div class="species-card" data-species="bear">
+                <div class="species-image">🐻</div>
+                <h3>Beruang Madu</h3>
+                <p class="species-status vulnerable">Status: Rentan</p>
+                <p class="species-info">Tinggal: Kalimantan & Sumatra | Populasi: Tidak pasti</p>
+                <p>Satu-satunya beruang Asia yang hidup di Indonesia. Kehilangan habitat memaksa mereka masuk pemukiman.</p>
+                <button class="btn-small" onclick="showSpeciesModal('bear')">Pelajari Lebih Lanjut</button>
+            </div>
+        </div>
+
+        <!-- Species Detail Modal -->
+        <div id="species-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeSpeciesModal()">&times;</span>
+                <div id="species-modal-body"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Visualization Section -->
+    <section id="data" class="fade-in">
+        <div class="section-header">
+            <h2><i class="fas fa-chart-bar"></i> Data & Visualisasi</h2>
+            <p class="section-subtitle">Angka-angka yang Menceritakan Krisis</p>
+        </div>
+
+        <div class="data-cards">
+            <div class="data-card">
+                <div class="stats-icon"><i class="fas fa-tree"></i></div>
+                <div class="stats-number" data-target="93.8">0</div>
+                <div class="stats-label">Juta Hektar Hutan</div>
+                <p class="stats-description">Total hutan Indonesia tahun 2020 (Global Forest Watch)</p>
+            </div>
+            <div class="data-card warning">
+                <div class="stats-icon"><i class="fas fa-fire"></i></div>
+                <div class="stats-number" data-target="261575">0</div>
+                <div class="stats-label">Hektar Hilang (2024)</div>
+                <p class="stats-description">Kehilangan hutan primer tahun 2024 (Mongabay, 2025)</p>
+            </div>
+            <div class="data-card danger">
+                <div class="stats-icon"><i class="fas fa-dna"></i></div>
+                <div class="stats-number" data-target="772">0</div>
+                <div class="stats-label">Spesies Terancam</div>
+                <p class="stats-description">Total spesies terancam punah di Indonesia (IUCN Red List)</p>
+            </div>
+            <div class="data-card info">
+                <div class="stats-icon"><i class="fas fa-leaf"></i></div>
+                <div class="stats-number" data-target="50000">0</div>
+                <div class="stats-label">Spesies Tumbuhan</div>
+                <p class="stats-description">Diperkirakan total spesies tumbuhan Indonesia</p>
+            </div>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-section">
+                <h3><i class="fas fa-chart-line"></i> Tren Kehilangan Hutan (2015-2024)</h3>
+                <canvas id="forestChart"></canvas>
+            </div>
+
+            <div class="chart-section">
+                <h3><i class="fas fa-pie-chart"></i> Penyebab Deforestasi</h3>
+                <canvas id="causesChart"></canvas>
+            </div>
+
+            <div class="chart-section">
+                <h3><i class="fas fa-map"></i> Dampak Deforestasi per Pulau</h3>
+                <canvas id="islandChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="fade-in">
+        <div class="section-header">
+            <h2><i class="fas fa-lightbulb"></i> Solusi & Aksi Nyata</h2>
+            <p class="section-subtitle">Peran Kita dalam Menyelamatkan Hutan</p>
+        </div>
+
+        <div class="solutions-tabs">
+            <button class="sol-tab active" data-sol="individual">💪 Aksi Individu</button>
+            <button class="sol-tab" data-sol="community">👥 Aksi Komunitas</button>
+            <button class="sol-tab" data-sol="policy">🏛️ Kebijakan</button>
+            <button class="sol-tab" data-sol="technology">🔬 Teknologi</button>
+        </div>
+
+        <div class="sol-content active" id="individual">
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon"><i framework="mdi mdi-sprout"></i>🌱</div>
+                    <h3>Menanam Pohon</h3>
+                    <p>Tanam pohon lokal di halaman, ikuti gerakan penanaman massal, atau donasikan untuk program reforestasi.</p>
+                    <ul>
+                        <li>1 pohon menyerap ~22 kg CO2 per tahun</li>
+                        <li>Pohon produktif: jati, sengon, trembesi</li>
+                        <li>Platform: Tanam Pohon untuk Indonesia</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-recycle"></i>♻️</div>
+                    <h3>Konsumsi Berkelanjutan</h3>
+                    <p>Beli produk dengan sertifikasi RSPO, FSC, atau organik. Hindari produk yang tidak ramah lingkungan.</p>
+                    <ul>
+                        <li>Sertifikat RSPO untuk minyak sawit berkelanjutan</li>
+                        <li>Sertifikat FSC untuk produk kayu</li>
+                        <li>Gunakan aplikasi scanner produk hijau</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-paper-plane"></i>📄</div>
+                    <h3>Kurangi Kertas</h3>
+                    <p>Gunakan dokumen digital, print double-sided, daur ulang kertas. Indonesia adalah importir kertas terbesar.</p>
+                    <ul>
+                        <li>1 ton kertas = 17 pohon</li>
+                        <li>Indonesia konsumsi 7,5 juta ton kertas/tahun</li>
+                        <li>Digitalisasi mengurangi konsumsi 30%</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-share-alt"></i>🌍</div>
+                    <h3>Edukasi & Kampanye</h3>
+                    <p>Sebarkan informasi, ikuti organisasi lingkungan, dan buat kampanye #AksiHijau di media sosial.</p>
+                    <ul>
+                        <li>Ikuti: WWF Indonesia, Greenpeace</li>
+                        <li>Kampanye hashtag #SaveOrangutan</li>
+                        <li>Menyebarkan ilmu kepada keluarga/teman</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="sol-content" id="community">
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-users"></i>👥</div>
+                    <h3>Komunitas Lokal</h3>
+                    <p>Bentuk kelompok peduli lingkungan, adakan diskusi, dan aksi nyata penanaman pohon bersama.</p>
+                    <ul>
+                        <li>Kelompok Pemuda Peduli Lingkungan</li>
+                        <li>Aksi penanaman bulanan</li>
+                        <li>Program adopsi pohon</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-hands-helping"></i>🙏</div>
+                    <h3>Masyarakat Adat</h3>
+                    <p>Dukung hak masyarakat adat yang menjaga hutan secara tradisional selama ratusan tahun.</p>
+                    <ul>
+                        <li>Masyarakat adat menjaga 40% hutan dunia</li>
+                        <li>Hutan adat: hukum adat menjaga ekosistem</li>
+                        <li>Pendampingan legal masyarakat adat</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-school"></i>🏫</div>
+                    <h3>Program Sekolah</h3>
+                    <p>Edukasi lingkungan sejak dini melalui kurikulum dan aksi hijau di sekolah.</p>
+                    <ul>
+                        <li>Ekowisata hutan sekolah</li>
+                        <li>Green school initiatives</li>
+                        <li>Pelajar jadi agen perubahan</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-hands-helping"></i>🤝</div>
+                    <h3>Perusahaan Berkelanjutan</h3>
+                    <p>Dukung CSR perusahaan yang berkomitmen reforestasi dan sustainability.</p>
+                    <ul>
+                        <li>Program "1 juta pohon" perusahaan</li>
+                        <li>Sertifikasi Green Industry</li>
+                        <li>Investasi green economy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="sol-content" id="policy">
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-balance-scale"></i>⚖️</div>
+                    <h3>Peraturan Perundangan</h3>
+                    <p>Pengawasan ketat penebangan ilegal, moratorium sawit baru, dan penegakan hukum.</p>
+                    <ul>
+                        <li>Undang-Undang Pengelolaan Hutan</li>
+                        <li>Moratorium izin sawit di hutan primer</li>
+                        <li>Hukuman penjara untuk illegal logging</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-shield-alt"></i>🛡️</div>
+                    <h3>Kawasan Lindung</h3>
+                    <p>Perluasan dan perlindungan ketat kawasan konservasi dan Taman Nasional.</p>
+                    <ul>
+                        <li>Target: 30% daratan jadi kawasan lindung</li>
+                        <li>54 Taman Nasional di Indonesia</li>
+                        <li>Program one map policy</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+ Chang                   <div class="solution-icon"><i class="fas fa-leaf"></i>🌿</div>
+                    <h3>Program Reforestasi</h3>
+                    <p>Gerakan penanaman nasional: Rehabilitasi Hutan dan Lahan (RHL) pemerintah.</p>
+                    <ul>
+                        <li>Target: 500 juta pohon per tahun</li>
+                        <li>Program: Menhut 1 Desa 1 Hutan</li>
+                        <li>Pembibitan nasional gratis</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-dollar-sign"></i>💰</div>
+                    <h3>Insentif Ekonomi</h3>
+                    <p>Pajak karbon, REDD+, dan payment for ecosystem services.</p>
+                    <ul>
+                        <li>Carbon offset trading</li>
+                        <li>Program REDD+ Indonesia</li>
+                        <li>Insentif untuk green economy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="sol-content" id="technology">
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-satellite"></i>🛰️</div>
+                    <h3>Satelit & Monitoring</h3>
+                    <p>Teknologi satelit untuk real-time monitoring deforestasi dan deteksi dini kebakaran.</p>
+                    <ul>
+                        <li>Satelit LAPAN untuk deteksi hotspot</li>
+                        <li>Platform Global Forest Watch</li>
+                        <li>AI untuk analisis citra satelit</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-seedling"></i>🌱</div>
+                    <h3>Teknologi Penanaman</h3>
+                    <p>Drone seeding untuk penanaman cepat di lahan sulit dijangkau dan terdegradasi.</p>
+                    <ul>
+                        <li>Drone tanam 150.000 biji/hari</li>
+                        <li>Pemetaan optimal penanaman</li>
+                        <li>Monitoring pertumbuhan via drone</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-fire"></i>🔥</div>
+                    <h3>Pencegahan Kebakaran</h3>
+                    <p>Sistem early warning, kanal blocking, dan pengelolaan air gambut.</p>
+                    <ul>
+                        <li>Sistem peringatan dini kebakaran</li>
+                        <li>Kanal blocking untuk basah gambut</li>
+                        <li>Teknologi AI prediksi kebakaran</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-dna"></i>🧬</div>
+                    <h3>Konservasi Genetik</h3>
+                    <p>Bank benih, kloning, dan teknologi reproduksi untuk spesies terancam.</p>
+                    <ul>
+                        <li>Bank benih nasional</li>
+                        <li>IVF untuk badak jawa</li>
+                        <li>Program breeding terancam</li>
+        </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="fade-in">
+        <div class="section-header">
+            <h2><i class="fas fa-trophy"></i> Kuis Interaktif</h2>
+            <p class="section-subtitle">Uji Pengetahuanmu tentang Deforestasi & Keanekaragaman Hayati</p>
+        </div>
+
+        <div class="quiz-container-wrapper">
+            <div class="quiz-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span class="progress-text" id="progress-text">Pertanyaan 1 dari 5</span>
+            </div>
+        <div class="quiz">
+                <div id="quiz-container"></div>
+                <p id="quiz-result"></p>
+                <button id="next-btn" class="btn quiz-btn" style="display:none;">⏭️ Lanjut</button>
+                <button id="finish-btn" class="btn quiz-btn" style="display:none;">🏁 Lihat Hasil</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mini Games Section -->
+    <section id="mini-games" class="fade-in">
+        <div class="section-header">
+            <h2><i class="fas fa-gamepad"></i> Mini Games Interaktif</h2>
+            <p class="section-subtitle">Belajar sambil Bermain tentang Hutan & Konservasi</p>
+        </div>
+
+        <div class="games-tabs">
+            <button class="game-tab active" data-game="memory">🧠 Memory Match</button>
+            <button class="game-tab" data-game="tree">🌳 Tanam Pohon</button>
+            <button class="game-tab" data-game="save">🛡️ Selamatkan Hutan</button>
+        </div>
+
+        <!-- Memory Match Game -->
+        <div class="game-content active" id="memory">
+            <div class="game-info">
+                <h3>🧠 Memory Match: Spesies Terancam</h3>
+                <p>Temukan pasangan hewan dan keterangannya. Tingkatkan pengetahuanmu tentang spesies terancam punah!</p>
+                <div class="game-stats">
+                    <span>⏱️ Waktu: <span id="memory-time">0</span>s</span>
+                    <span>🔢 Percobaan: <span id="memory-moves">0</span></span>
+                    <span>🏆 Skor: <span id="memory-score">0</span></span>
+                </div>
+                <button class="btn btn-primary" onclick="startMemoryGame()">Mulai Permainan</button>
+                <button class="btn btn-secondary" onclick="resetMemoryGame()">Reset</button>
+            </div>
+            <div class="memory-board" id="memory-board"></div>
+            <div class="game-result" id="memory-result"></div>
+        </div>
+
+        <!-- Tree Planting Game -->
+        <div class="game-content" id="tree">
+            <div class="game-info">
+                <h3>🌳 Tanam Pohon: Restorasi Hutan</h3>
+                <p>Tanam pohon di area yang tepat dan cegah kebakaran. Setiap pohon mengurangi CO2!</p>
+                <div class="game-stats">
+                    <span>🌳 Pohon: <span id="tree-count">0</span></span>
+                    <span>💨 CO2 Diserap: <span id="co2-absorbed">0</span> ton</span>
+                    <span>💰 Skor: <span id="tree-score">0</span></span>
+                </div>
+                <button class="btn btn-primary" onclick="startTreeGame()">Mulai Tanam</button>
+                <button class="btn btn-secondary" onclick="resetTreeGame()">Reset</button>
+            </div>
+            <div class="tree-game-container">
+                <div class="tree-grid" id="tree-grid"></div>
+                <div class="fire-warning" id="fire-warning"></div>
+            </div>
+                </div>
+            
+        <!-- Save Forest Game -->
+        <div class="game-content" id="save">
+            <div class="game-info">
+                <h3>🛡️ Selamatkan Hutan: Pencegahan Deforestasi</h3>
+                <p>Klik pada ancaman untuk menghentikannya! Hutan bertahan jika semua ancaman tertangani.</p>
+                <div class="game-stats">
+                    <span>🌲 Hutan: <span id="forest-health">100</span>%</span>
+                    <span>🎯 Ancaman: <span id="threats-left">0</span></span>
+                    <span>⭐ Skor: <span id="save-score">0</span></span>
+                </div>
+                <button class="btn btn-primary" onclick="startSaveGame()">Mulai Mission</button>
+            </div>
+            <div class="forest-area">
+                <div class="forest-progress">
+                    <div class="forest-bar-fill" id="forest-bar"></div>
+                </div>
+                <div class="threats-container" id="threats-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+        <div class="section-header">
+            <h2><i class="fas fa-users"></i> Tentang Kami</h2>
+            <p class="section-subtitle">Tim di Balik Platform Edukasi Ini</p>
+        </div>
+
+        <div class="info-card">
+            <h3><i class="fas fa-bullseye"></i> Tujuan Proyek</h3>
+            <p>Platform "Hutan Kita" dibuat untuk meningkatkan literasi lingkungan masyarakat Indonesia tentang krisis deforestasi dan keanekaragaman hayati. Dengan pendekatan edukatif yang interaktif, kami berharap dapat menginspirasi aksi nyata dalam menjaga hutan Indonesia. Proyek ini merupakan bagian dari tugas Mata Kuliah <strong>Literasi Lingkungan</strong> semester 5.</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-avatar">👩‍💻</div>
+                <h4>Putu Utami Pramesti Indraswari</h4>
+                <p class="team-nim">2315101014</p>
+                <p class="team-role">Programmer (Frontend Lead)</p>
+                <div class="team-skills">
+                    <span class="skill-tag">HTML/CSS/JS</span>
+                    <span class="skill-tag">UI/UX</span>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">🎨</div>
+                <h4>Made Adhika Mahardhika</h4>
+                <p class="team-nim">2315051093</p>
+                <p class="team-role">Desainer Grafis & UI/UX</p>
+                <div class="team-skills">
+                    <span class="skill-tag">Design</span>
+                    <span class="skill-tag">Visual</span>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">✍️</div>
+                <h4>I Nyoman Suwenten</h4>
+                <p class="team-nim">2315051033</p>
+                <p class="team-role">Content Writer (Konten Lead)</p>
+                <div class="team-skills">
+                    <span class="skill-tag">Writing</span>
+                    <span class="skill-tag">Research</span>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">📊</div>
+                <h4>Rendi Al Hairi</h4>
+                <p class="team-nim">2317041228</p>
+                <p class="team-role">Data Analyst (Riset Data)</p>
+                <div class="team-skills">
+                    <span class="skill-tag">Data</span>
+                    <span class="skill-tag">Research</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h3><i class="fas fa-envelope"></i> Hubungi Kami</h3>
+            <div class="contact-info">
+                <a href="https://instagram.com/amikkchan" target="_blank" class="contact-link">
+                    <span class="contact-icon"><i class="fab fa-instagram"></i></span>
+                    <span>Instagram Hutan Kita</span>
+                </a>
+                <a href="mailto:amikbekap99@gmail.com" class="contact-link">
+                    <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                    <span>Email: timhutankita@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4><i class="fas fa-tree"></i> Hutan Kita</h4>
+                <p Dynamicthehatkan Literasi Lingkungan Indonesia</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#overview">Gambaran Umum</a>
+                <a href="#species">Spesies Terancam</a>
+                <a href="#solutions">Solusi</a>
+                <a href="#quiz">Kuis</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <p>© 2025 Hutan Kita</p>
+                <p>Proyek Literasi Lingkungan</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Dibuat dengan <i class="fas fa-heart"></i> untuk Masa Depan Hutan Indonesia</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="scroll-top-btn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script> 
+</body>
+</html>
