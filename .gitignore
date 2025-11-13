@@ -1,0 +1,16 @@
+# FOLDER YANG TIDAK DIINGINKAN (DIHAPUS DARI TRACKING)
+/Booklet Hutan/
+/FSM Biner 01/
+/Komputer Grafika/
+/Web Hutan/Web Hutan/
+/portfolio/
+/website/
+
+# FILE YANG TIDAK DIINGINKAN (DIHAPUS DARI TRACKING)
+Tugas Biner 111.cpp
+kasir-app.zip
+
+# HINDARI MENGHAPUS FOLDER UTAMA KAMU: kasir-app
+# Kamu bisa tambahkan juga di sini file/folder yang umum di-ignore:
+/node_modules/
+*.log 
